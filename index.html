@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LocalAI</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+/* Layout: one narrow reading column; a small header with three section links, three plain sections. */
+:root {
+  --bg: #fbf9fa; --fg: #1d1a1c; --muted: #6c6469; --line: #e7e1e4; --accent: #d81e4a; --chip: #f3e9ed;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --text: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #161315; --fg: #eee8eb; --muted: #a59ba0; --line: #2e292c; --accent: #ff5c80; --chip: #2a2226; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #161315; --fg: #eee8eb; --muted: #a59ba0; --line: #2e292c; --accent: #ff5c80; --chip: #2a2226; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.65 var(--text); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: .6rem; font: 700 1.35rem var(--display); }
+.mark { width: 1.9rem; height: 1.9rem; border-radius: .5rem; background: var(--accent); display: grid; place-items: center; }
+.mark::after { content: ""; border-left: .62rem solid #fff; border-top: .4rem solid transparent; border-bottom: .4rem solid transparent; margin-left: .15rem; }
+nav { display: flex; gap: .4rem; flex-wrap: wrap; }
+nav a { color: var(--fg); text-decoration: none; font-size: .9rem; padding: .3rem .7rem; border-radius: 999px; background: var(--chip); }
+nav a:hover, nav a:focus-visible { color: var(--accent); outline: none; }
+section { padding-top: 2.25rem; scroll-margin-top: 1rem; }
+h1, h2 { font-family: var(--display); text-wrap: balance; line-height: 1.2; margin: 0 0 .75rem; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1rem; margin: 1.4rem 0 .3rem; }
+p, li { color: var(--fg); }
+.meta { color: var(--muted); font-size: .85rem; letter-spacing: .02em; }
+ul { padding-left: 1.2rem; }
+body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="mark" aria-hidden="true"></span>LocalAI</div>
+    <nav aria-label="Sections"><a href="#about">About</a><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a></nav>
+  </header>
+
+  <section id="about">
+    <h1>LocalAI</h1>
+    <p>LocalAI is a personal desktop tool. It runs on its owner's own computer, turns short scripts into vertical videos, and uploads the finished videos to the owner's own TikTok account through the TikTok Content Posting API.</p>
+    <p>The tool is not offered to the public. It has a single user: the person who runs it and owns the connected TikTok account.</p>
+    <p class="meta">Last updated: 24 November 2026</p>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of Service</h2>
+    <h3>Who may use it</h3>
+    <p>LocalAI is used only by its owner, on the owner's own computer, with the owner's own TikTok account. There are no other users and no accounts to create.</p>
+    <h3>What it does with TikTok</h3>
+    <ul>
+      <li>Signs in to TikTok only when the owner starts the sign-in from the app.</li>
+      <li>Uploads videos the owner produced to the owner's TikTok account, as drafts or as posts with the privacy level the owner chose.</li>
+      <li>Marks uploaded videos as AI-generated content.</li>
+    </ul>
+    <h3>Content</h3>
+    <p>The owner is responsible for every video uploaded and for following TikTok's Community Guidelines and Terms of Service. Videos feature fictional characters only.</p>
+    <h3>No warranty</h3>
+    <p>LocalAI is provided as is, without warranty of any kind. The owner can stop using it or disconnect TikTok at any time.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <h3>Data collected</h3>
+    <p>From TikTok, LocalAI receives only what the owner authorizes: an access token, a refresh token, the account's open ID, and basic profile information (display name and avatar).</p>
+    <h3>Where it is stored</h3>
+    <p>Tokens are stored in a local file on the owner's computer. Nothing is sent to any server operated by LocalAI, because there is none. Data goes only to TikTok's own API when a video is uploaded.</p>
+    <h3>Sharing</h3>
+    <p>LocalAI does not sell, share or transfer any data to third parties. It collects no data about other TikTok users.</p>
+    <h3>Deleting data</h3>
+    <p>Choosing "Disconnect TikTok" in the app revokes the token with TikTok and deletes the local token file. Access can also be removed at any time from TikTok's app settings under Security, Manage app permissions.</p>
+  </section>
+</div>
+
+</body>
+</html>
